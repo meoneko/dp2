@@ -115,17 +115,17 @@ namespace DigitalPlatform.rms.Client
             // 
             this.textBox_content.AcceptsReturn = true;
             this.textBox_content.AcceptsTab = true;
-            this.textBox_content.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.textBox_content.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_content.HideSelection = false;
             this.textBox_content.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.textBox_content.Location = new System.Drawing.Point(9, 82);
+            this.textBox_content.Location = new System.Drawing.Point(7, 76);
             this.textBox_content.MaxLength = 2000000000;
             this.textBox_content.Multiline = true;
             this.textBox_content.Name = "textBox_content";
             this.textBox_content.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox_content.Size = new System.Drawing.Size(546, 237);
+            this.textBox_content.Size = new System.Drawing.Size(549, 250);
             this.textBox_content.TabIndex = 4;
             this.textBox_content.TextChanged += new System.EventHandler(this.textBox_content_TextChanged);
             this.textBox_content.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_content_KeyUp);
@@ -136,9 +136,9 @@ namespace DigitalPlatform.rms.Client
             // 
             this.button_OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_OK.Enabled = false;
-            this.button_OK.Location = new System.Drawing.Point(480, 356);
+            this.button_OK.Location = new System.Drawing.Point(494, 361);
             this.button_OK.Name = "button_OK";
-            this.button_OK.Size = new System.Drawing.Size(75, 24);
+            this.button_OK.Size = new System.Drawing.Size(62, 22);
             this.button_OK.TabIndex = 9;
             this.button_OK.Text = "保存";
             this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
@@ -147,48 +147,48 @@ namespace DigitalPlatform.rms.Client
             // 
             this.button_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_Cancel.Location = new System.Drawing.Point(480, 384);
+            this.button_Cancel.Location = new System.Drawing.Point(494, 387);
             this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(75, 22);
+            this.button_Cancel.Size = new System.Drawing.Size(62, 20);
             this.button_Cancel.TabIndex = 10;
             this.button_Cancel.Text = "取消";
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // textBox_path
             // 
-            this.textBox_path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.textBox_path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_path.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.textBox_path.Location = new System.Drawing.Point(83, 33);
+            this.textBox_path.Location = new System.Drawing.Point(69, 31);
             this.textBox_path.Name = "textBox_path";
-            this.textBox_path.Size = new System.Drawing.Size(472, 21);
+            this.textBox_path.Size = new System.Drawing.Size(487, 20);
             this.textBox_path.TabIndex = 1;
             // 
             // button_format
             // 
             this.button_format.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_format.Location = new System.Drawing.Point(104, 356);
+            this.button_format.Location = new System.Drawing.Point(87, 361);
             this.button_format.Name = "button_format";
-            this.button_format.Size = new System.Drawing.Size(120, 23);
+            this.button_format.Size = new System.Drawing.Size(100, 21);
             this.button_format.TabIndex = 8;
             this.button_format.Text = "整理XML格式(&F)";
             this.button_format.Click += new System.EventHandler(this.button_format_Click);
             // 
             // label_message
             // 
-            this.label_message.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label_message.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_message.Location = new System.Drawing.Point(8, 328);
+            this.label_message.Location = new System.Drawing.Point(7, 335);
             this.label_message.Name = "label_message";
-            this.label_message.Size = new System.Drawing.Size(544, 22);
+            this.label_message.Size = new System.Drawing.Size(547, 20);
             this.label_message.TabIndex = 5;
             // 
             // button_export
             // 
             this.button_export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_export.Location = new System.Drawing.Point(9, 356);
+            this.button_export.Location = new System.Drawing.Point(7, 361);
             this.button_export.Name = "button_export";
-            this.button_export.Size = new System.Drawing.Size(75, 23);
+            this.button_export.Size = new System.Drawing.Size(63, 21);
             this.button_export.TabIndex = 6;
             this.button_export.Text = "导出(&E)...";
             this.button_export.Click += new System.EventHandler(this.button_export_Click);
@@ -196,9 +196,9 @@ namespace DigitalPlatform.rms.Client
             // button_import
             // 
             this.button_import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_import.Location = new System.Drawing.Point(9, 384);
+            this.button_import.Location = new System.Drawing.Point(7, 387);
             this.button_import.Name = "button_import";
-            this.button_import.Size = new System.Drawing.Size(75, 22);
+            this.button_import.Size = new System.Drawing.Size(63, 20);
             this.button_import.TabIndex = 7;
             this.button_import.Text = "导入(&I)...";
             this.button_import.Click += new System.EventHandler(this.button_import_Click);
@@ -206,46 +206,46 @@ namespace DigitalPlatform.rms.Client
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 36);
+            this.label1.Location = new System.Drawing.Point(6, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "路径(&P):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 60);
+            this.label2.Location = new System.Drawing.Point(6, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 12);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "&MIME:";
             // 
             // textBox_mime
             // 
             this.textBox_mime.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.textBox_mime.Location = new System.Drawing.Point(83, 58);
+            this.textBox_mime.Location = new System.Drawing.Point(69, 54);
             this.textBox_mime.Name = "textBox_mime";
-            this.textBox_mime.Size = new System.Drawing.Size(192, 21);
+            this.textBox_mime.Size = new System.Drawing.Size(160, 20);
             this.textBox_mime.TabIndex = 3;
             this.textBox_mime.TextChanged += new System.EventHandler(this.textBox_mime_TextChanged);
             // 
             // textBox_serverUrl
             // 
-            this.textBox_serverUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.textBox_serverUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_serverUrl.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.textBox_serverUrl.Location = new System.Drawing.Point(83, 9);
+            this.textBox_serverUrl.Location = new System.Drawing.Point(69, 8);
             this.textBox_serverUrl.Name = "textBox_serverUrl";
-            this.textBox_serverUrl.Size = new System.Drawing.Size(472, 21);
+            this.textBox_serverUrl.Size = new System.Drawing.Size(487, 20);
             this.textBox_serverUrl.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 12);
+            this.label3.Location = new System.Drawing.Point(6, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "服务器(&U):";
             // 
@@ -253,16 +253,16 @@ namespace DigitalPlatform.rms.Client
             // 
             this.checkBox_autoCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBox_autoCreate.AutoSize = true;
-            this.checkBox_autoCreate.Location = new System.Drawing.Point(104, 387);
+            this.checkBox_autoCreate.Location = new System.Drawing.Point(87, 387);
             this.checkBox_autoCreate.Name = "checkBox_autoCreate";
-            this.checkBox_autoCreate.Size = new System.Drawing.Size(138, 16);
+            this.checkBox_autoCreate.Size = new System.Drawing.Size(135, 17);
             this.checkBox_autoCreate.TabIndex = 13;
             this.checkBox_autoCreate.Text = "自动创建中间对象(&A)";
             // 
             // CfgFileEditDlg
             // 
             this.AcceptButton = this.button_OK;
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.CancelButton = this.button_Cancel;
             this.ClientSize = new System.Drawing.Size(564, 416);
             this.Controls.Add(this.checkBox_autoCreate);

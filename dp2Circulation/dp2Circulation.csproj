@@ -22,7 +22,7 @@
     <ManifestCertificateThumbprint>458DBD8488B5B2A4FD0653A590D3F6E2BC38DA9F</ManifestCertificateThumbprint>
     <ManifestKeyFile>dp2003.pfx</ManifestKeyFile>
     <GenerateManifests>false</GenerateManifests>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <ApplicationIcon>nei.ico</ApplicationIcon>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileUpgradeFlags>
@@ -2392,7 +2392,6 @@
     <Content Include="default_printorder_publisherstatis_accept.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="dp2003.pfx" />
     <Content Include="jquery.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -3056,7 +3055,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

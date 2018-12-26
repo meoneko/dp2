@@ -1,4 +1,4 @@
-namespace dp2Library
+ï»¿namespace dp2Library
 {
     partial class HostNameDialog
     {
@@ -43,7 +43,7 @@ namespace dp2Library
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ö÷»úÃû(&H):";
+            this.label1.Text = "ä¸»æœºå(&H):";
             // 
             // comboBox_hostName
             // 
@@ -65,7 +65,7 @@ namespace dp2Library
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(75, 29);
             this.button_Cancel.TabIndex = 21;
-            this.button_Cancel.Text = "È¡Ïû";
+            this.button_Cancel.Text = "å–æ¶ˆ";
             this.button_Cancel.UseVisualStyleBackColor = true;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
@@ -76,7 +76,7 @@ namespace dp2Library
             this.button_OK.Name = "button_OK";
             this.button_OK.Size = new System.Drawing.Size(75, 29);
             this.button_OK.TabIndex = 20;
-            this.button_OK.Text = "È·¶¨";
+            this.button_OK.Text = "ç¡®å®š";
             this.button_OK.UseVisualStyleBackColor = true;
             this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
             // 
@@ -93,7 +93,7 @@ namespace dp2Library
             this.textBox_comment.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_comment.Size = new System.Drawing.Size(268, 81);
             this.textBox_comment.TabIndex = 22;
-            this.textBox_comment.Text = "×¢£º¸ñÊ½Îª Ö÷»úÃû:¶Ë¿ÚºÅ";
+            this.textBox_comment.Text = "æ³¨ï¼šæ ¼å¼ä¸º ä¸»æœºå:ç«¯å£å·";
             // 
             // HostNameDialog
             // 
@@ -110,7 +110,7 @@ namespace dp2Library
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HostNameDialog";
             this.ShowInTaskbar = false;
-            this.Text = "ÇëÖ¸¶¨Ö÷»úÃû";
+            this.Text = "è¯·æŒ‡å®šä¸»æœºå";
             this.Load += new System.EventHandler(this.HostNameDialog_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

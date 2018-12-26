@@ -16,10 +16,10 @@ namespace DigitalPlatform.CommonDialog
     /// </summary>
     public class QuestionDlg : System.Windows.Forms.Form
     {
-        private System.Windows.Forms.Label label_messageTitle;
-        private System.Windows.Forms.TextBox textBox_question;
+        public System.Windows.Forms.Label label_messageTitle;
+        public System.Windows.Forms.TextBox textBox_question;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_result;
+        public System.Windows.Forms.TextBox textBox_result;
         private System.Windows.Forms.Button button_OK;
         private System.Windows.Forms.Button button_Cancel;
         private Label label_pinyin;

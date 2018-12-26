@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 
 using DigitalPlatform.Library;
 using DigitalPlatform.rms.Client;
@@ -6,140 +6,140 @@ using DigitalPlatform.Xml;
 
 namespace dp2Batch
 {
-	/// <summary>
-	/// Summary description for Batch.
-	/// </summary>
-	public class Batch
-	{
-		public ApplicationInfo ap = null;
-		public MainForm MainForm = null;	// ÒıÓÃ
+    /// <summary>
+    /// Summary description for Batch.
+    /// </summary>
+    public class Batch
+    {
+        public ApplicationInfo ap = null;
+        public MainForm MainForm = null;	// å¼•ç”¨
 
         public SearchPanel SearchPanel = null;
 
-		public string ServerUrl = "";
+        public string ServerUrl = "";
 
-		private string	m_strXmlRecord = "";
-		private bool	m_bXmlRecordChanged = false;	// XML¼ÇÂ¼ÊÇ·ñ±»½Å±¾¸Ä±ä
+        private string m_strXmlRecord = "";
+        private bool m_bXmlRecordChanged = false;   // XMLè®°å½•æ˜¯å¦è¢«è„šæœ¬æ”¹å˜
 
 
-		public string	MarcSyntax = "";
+        public string MarcSyntax = "";
 
-		private string	m_strMarcRecord = "";	// MARC¼ÇÂ¼Ìå¡£Íâ²¿½Ó¿ÚÔÚMarcRecord {get;set}
-		private bool	m_bMarcRecordChanged = false;	// MARC¼ÇÂ¼ÊÇ·ñ±»½Å±¾¸Ä±ä
+        private string m_strMarcRecord = "";    // MARCè®°å½•ä½“ã€‚å¤–éƒ¨æ¥å£åœ¨MarcRecord {get;set}
+        private bool m_bMarcRecordChanged = false;  // MARCè®°å½•æ˜¯å¦è¢«è„šæœ¬æ”¹å˜
 
-		/*
-		private string	m_strMarcOutputRecord = "";	// ÓÃÓÚÊä³öµÄMARC¼ÇÂ¼Ìå¡£Íâ²¿½Ó¿ÚÔÚMarcOutputRecord {get;set}
-		private bool	m_bMarcOutputRecordChanged = false;	// ÓÃÓÚÊä³öµÄMARC¼ÇÂ¼ÊÇ·ñ±»½Å±¾¸Ä±ä
+        /*
+		private string	m_strMarcOutputRecord = "";	// ç”¨äºè¾“å‡ºçš„MARCè®°å½•ä½“ã€‚å¤–éƒ¨æ¥å£åœ¨MarcOutputRecord {get;set}
+		private bool	m_bMarcOutputRecordChanged = false;	// ç”¨äºè¾“å‡ºçš„MARCè®°å½•æ˜¯å¦è¢«è„šæœ¬æ”¹å˜
 		*/
 
 
-		public byte[] TimeStamp = null;	// Ê±¼ä´Á
-		public string RecPath = "";	// ¼ÇÂ¼Â·¾¶
-		public int RecIndex = 0;	// µ±Ç°¼ÇÂ¼ÔÚÒ»ÅúÖĞµÄĞòºÅ¡£´Ó0¿ªÊ¼¼ÆÊı
-		public string ProjectDir = "";
-		public string DbPath = "";	// Êı¾İ¿âÂ·¾¶
+        public byte[] TimeStamp = null; // æ—¶é—´æˆ³
+        public string RecPath = ""; // è®°å½•è·¯å¾„
+        public int RecIndex = 0;    // å½“å‰è®°å½•åœ¨ä¸€æ‰¹ä¸­çš„åºå·ã€‚ä»0å¼€å§‹è®¡æ•°
+        public string ProjectDir = "";
+        public string DbPath = "";  // æ•°æ®åº“è·¯å¾„
 
-		public bool SkipInput = false;
+        public bool SkipInput = false;
 
-		public Batch()
-		{
-			//
-			// TODO: Add constructor logic here
-			//
-		}
+        public Batch()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+        }
 
-		public virtual void OnInitial(object sender, BatchEventArgs e)
-		{
+        public virtual void OnInitial(object sender, BatchEventArgs e)
+        {
 
-		}
+        }
 
-		public virtual void OnBegin(object sender, BatchEventArgs e)
-		{
+        public virtual void OnBegin(object sender, BatchEventArgs e)
+        {
 
-		}
+        }
 
-		public virtual void Outputing(object sender, BatchEventArgs e)
-		{
+        public virtual void Outputing(object sender, BatchEventArgs e)
+        {
 
-		}
+        }
 
-		public virtual void Inputing(object sender, BatchEventArgs e)
-		{
+        public virtual void Inputing(object sender, BatchEventArgs e)
+        {
 
-		}
+        }
 
-		public virtual void Inputed(object sender, BatchEventArgs e)
-		{
+        public virtual void Inputed(object sender, BatchEventArgs e)
+        {
 
-		}
+        }
 
-		public virtual void OnEnd(object sender, BatchEventArgs e)
-		{
+        public virtual void OnEnd(object sender, BatchEventArgs e)
+        {
 
-		}
+        }
 
-		public virtual void OnPrint(object sender, BatchEventArgs e)
-		{
+        public virtual void OnPrint(object sender, BatchEventArgs e)
+        {
 
-		}
+        }
 
 
-		// MARC¼ÇÂ¼Ìå
-		public string MarcRecord 
-		{
-			get 
-			{
-				return m_strMarcRecord;
-			}
-			set 
-			{
-				m_strMarcRecord = value;
-				m_bMarcRecordChanged = true;
-			}
-		}
+        // MARCè®°å½•ä½“
+        public string MarcRecord
+        {
+            get
+            {
+                return m_strMarcRecord;
+            }
+            set
+            {
+                m_strMarcRecord = value;
+                m_bMarcRecordChanged = true;
+            }
+        }
 
-		// MARC¼ÇÂ¼ÌåÊÇ·ñ±»¸Ä±ä¹ı
-		public bool MarcRecordChanged
-		{
-			get 
-			{
-				return m_bMarcRecordChanged;
-			}
-			set 
-			{
-				m_bMarcRecordChanged = value;
-			}
-		}
+        // MARCè®°å½•ä½“æ˜¯å¦è¢«æ”¹å˜è¿‡
+        public bool MarcRecordChanged
+        {
+            get
+            {
+                return m_bMarcRecordChanged;
+            }
+            set
+            {
+                m_bMarcRecordChanged = value;
+            }
+        }
 
-		// XML¼ÇÂ¼Ìå
-		public string XmlRecord 
-		{
-			get 
-			{
-				return m_strXmlRecord;
-			}
-			set 
-			{
-				m_strXmlRecord = value;
-				m_bXmlRecordChanged = true;
-			}
-		}
+        // XMLè®°å½•ä½“
+        public string XmlRecord
+        {
+            get
+            {
+                return m_strXmlRecord;
+            }
+            set
+            {
+                m_strXmlRecord = value;
+                m_bXmlRecordChanged = true;
+            }
+        }
 
-		// Xml¼ÇÂ¼ÌåÊÇ·ñ±»¸Ä±ä¹ı
-		public bool XmlRecordChanged
-		{
-			get 
-			{
-				return m_bXmlRecordChanged;
-			}
-			set 
-			{
-				m_bXmlRecordChanged = value;
-			}
-		}
+        // Xmlè®°å½•ä½“æ˜¯å¦è¢«æ”¹å˜è¿‡
+        public bool XmlRecordChanged
+        {
+            get
+            {
+                return m_bXmlRecordChanged;
+            }
+            set
+            {
+                m_bXmlRecordChanged = value;
+            }
+        }
 
-		/*
-		// ÓÃÓÚÊä³öµÄMARC¼ÇÂ¼Ìå
+        /*
+		// ç”¨äºè¾“å‡ºçš„MARCè®°å½•ä½“
 		public string MarcOutputRecord 
 		{
 			get 
@@ -153,7 +153,7 @@ namespace dp2Batch
 			}
 		}
 
-		// ÓÃÓÚÊä³öµÄMARC¼ÇÂ¼ÌåÊÇ·ñ±»¸Ä±ä¹ı
+		// ç”¨äºè¾“å‡ºçš„MARCè®°å½•ä½“æ˜¯å¦è¢«æ”¹å˜è¿‡
 		public bool MarcOutputRecordChanged
 		{
 			get 
@@ -167,37 +167,37 @@ namespace dp2Batch
 		}
 		*/
 
-		public string RecFullPath
-		{
-			get 
-			{
-				return this.ServerUrl + "?" + this.RecPath;
-			}
-			set 
-			{
-				ResPath respath = new ResPath(value);
+        public string RecFullPath
+        {
+            get
+            {
+                return this.ServerUrl + "?" + this.RecPath;
+            }
+            set
+            {
+                ResPath respath = new ResPath(value);
 
-				this.ServerUrl = respath.Url;
-				this.RecPath = respath.Path;
-			}
-		}
+                this.ServerUrl = respath.Url;
+                this.RecPath = respath.Path;
+            }
+        }
 
-	}
+    }
 
-	public enum ContinueType
-	{
-		Yes = 0,
-		/*
+    public enum ContinueType
+    {
+        Yes = 0,
+        /*
 		SkipBegin = 1,
 		SkipMiddle = 2,
 		SkipBeginMiddle = 3,
 		*/
-		SkipAll = 4,
-	}
+        SkipAll = 4,
+    }
 
-	public class BatchEventArgs : EventArgs
-	{
-		public ContinueType	Continue = ContinueType.Yes;	// ÊÇ·ñ¼ÌĞøÑ­»·
-	}
+    public class BatchEventArgs : EventArgs
+    {
+        public ContinueType Continue = ContinueType.Yes;    // æ˜¯å¦ç»§ç»­å¾ªç¯
+    }
 
 }

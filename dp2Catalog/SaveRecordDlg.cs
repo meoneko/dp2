@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +14,7 @@ namespace dp2Catalog
 {
     public partial class SaveRecordDlg : Form
     {
-        // µ±Ç°ÓÃ»§Ãû
+        // å½“å‰ç”¨æˆ·å
         public string CurrentUserName = "";
 
         bool m_bFirst = true;
@@ -24,7 +24,7 @@ namespace dp2Catalog
 
         public ISearchForm LinkedSearchForm = null;
 
-        // Íâ²¿ÉèÖÃ´ËÖµ
+        // å¤–éƒ¨è®¾ç½®æ­¤å€¼
         public DtlpChannelArray DtlpChannels = null;
         public DtlpChannel DtlpChannel = null;	// 
 
@@ -70,7 +70,7 @@ namespace dp2Catalog
             this.GetDtlpSearchParam(this, e);
 
 
-            // ³õÊ¼»¯DTLPĞ­ÒéÏà¹Ø²ÎÊı
+            // åˆå§‹åŒ–DTLPåè®®ç›¸å…³å‚æ•°
             this.dtlpResDirControl1.channelarray = e.DtlpChannels;
             dtlpResDirControl1.Channel = e.DtlpChannel;
 
@@ -82,7 +82,7 @@ namespace dp2Catalog
              * */
             dtlpResDirControl1.FillSub(null);
 
-            // Õ¹¿ª
+            // å±•å¼€
             if (this.textBox_dtlpRecPath.Text != "")
             {
                 string strSavePath = this.textBox_dtlpRecPath.Text;
@@ -112,9 +112,9 @@ namespace dp2Catalog
     && this.dp2ResTree1.cfgCache == null)
                 this.dp2ResTree1.cfgCache = this.MainForm.cfgCache;
 
-            // ³õÊ¼»¯dp2Ğ­ÒéÏà¹Ø²ÎÊı
+            // åˆå§‹åŒ–dp2åè®®ç›¸å…³å‚æ•°
             this.dp2ResTree1.stopManager = e.MainForm.stopManager;
-            this.dp2ResTree1.Servers = e.MainForm.Servers;	// ÒıÓÃ
+            this.dp2ResTree1.Servers = e.MainForm.Servers;	// å¼•ç”¨
 #if OLD_CHANNEL
             this.dp2ResTree1.Channels = e.dp2Channels;
 #endif
@@ -134,7 +134,7 @@ namespace dp2Catalog
             {
                 if (this.textBox_dtlpRecPath.Text == "")
                 {
-                    MessageBox.Show(this, "ÉĞÎ´Ö¸¶¨±£´æÂ·¾¶");
+                    MessageBox.Show(this, "å°šæœªæŒ‡å®šä¿å­˜è·¯å¾„");
                     return;
                 }
             }
@@ -143,7 +143,7 @@ namespace dp2Catalog
             {
                 if (this.textBox_dp2RecPath.Text == "")
                 {
-                    MessageBox.Show(this, "ÉĞÎ´Ö¸¶¨±£´æÂ·¾¶");
+                    MessageBox.Show(this, "å°šæœªæŒ‡å®šä¿å­˜è·¯å¾„");
                     return;
                 }
 
@@ -154,7 +154,7 @@ namespace dp2Catalog
             {
                 if (this.textBox_unionCatalogRecPath.Text == "")
                 {
-                    MessageBox.Show(this, "ÉĞÎ´Ö¸¶¨±£´æÂ·¾¶");
+                    MessageBox.Show(this, "å°šæœªæŒ‡å®šä¿å­˜è·¯å¾„");
                     return;
                 }
             }
@@ -195,7 +195,7 @@ namespace dp2Catalog
                 string strProtocol = "";
                 string strPath = "";
                 string strError = "";
-                // ·ÖÎöÂ·¾¶
+                // åˆ†æè·¯å¾„
                 int nRet = Global.ParsePath(strFullPath,
                     out strProtocol,
                     out strPath,
@@ -261,7 +261,7 @@ namespace dp2Catalog
 
         }
 
-        // ÇëÇó¸ø³öItemÎÄ×Ö²ÎÊı
+        // è¯·æ±‚ç»™å‡ºItemæ–‡å­—å‚æ•°
         public int DtlpItemText(string strPath,
             Int32 nMask,
             out string strFontFace,
@@ -277,7 +277,7 @@ namespace dp2Catalog
             {
 
                 /*
-                strFontFace = "ËÎÌå";
+                strFontFace = "å®‹ä½“";
                 nFontSize = 12;
                 FontStyle = FontStyle.Bold;
                 ForeColor = Color.Red;
@@ -294,10 +294,10 @@ namespace dp2Catalog
         }
 #endif
 
-        // ÊÂÏî±»selected
+        // äº‹é¡¹è¢«selected
         private void dtlpResDirControl1_ItemSelected(object sender, ItemSelectedEventArgs e)
         {
-            // ºöÂÔµôµÚÒ»´ÎItemSelectedÊÂ¼ş
+            // å¿½ç•¥æ‰ç¬¬ä¸€æ¬¡ItemSelectedäº‹ä»¶
             if (m_bFirst == true)
             {
                 m_bFirst = false;
@@ -312,7 +312,7 @@ namespace dp2Catalog
 
         }
 
-        // ÇëÇó¸ø³öItemÎÄ×Ö²ÎÊı
+        // è¯·æ±‚ç»™å‡ºItemæ–‡å­—å‚æ•°
         private void dtlpResDirControl1_GetItemTextStyle(object sender, GetItemTextStyleEventArgs e)
         {
             e.FontFace = "";
@@ -356,11 +356,11 @@ namespace dp2Catalog
                 return;
             }
 
-            // ¿´¿´Ô­À´textboxÖĞÒÑÓĞÂ·¾¶
+            // çœ‹çœ‹åŸæ¥textboxä¸­å·²æœ‰è·¯å¾„
             string strExistServerName = "";
             string strExistLocalPath = "";
-            // ½âÎö¼ÇÂ¼Â·¾¶¡£
-            // ¼ÇÂ¼Â·¾¶ÎªÈçÏÂĞÎÌ¬ "ÖĞÎÄÍ¼Êé/1 @·şÎñÆ÷"
+            // è§£æè®°å½•è·¯å¾„ã€‚
+            // è®°å½•è·¯å¾„ä¸ºå¦‚ä¸‹å½¢æ€ "ä¸­æ–‡å›¾ä¹¦/1 @æœåŠ¡å™¨"
             dp2SearchForm.ParseRecPath(this.textBox_dp2RecPath.Text,
                 out strExistServerName,
                 out strExistLocalPath);
@@ -373,7 +373,7 @@ namespace dp2Catalog
             {
                 this.textBox_dp2RecPath.Text = strDbName + "/?@" + strServerName;
             }
-            // ·ñÔò²»¶¯
+            // å¦åˆ™ä¸åŠ¨
 
             return;
         ERROR1:
@@ -403,8 +403,8 @@ namespace dp2Catalog
         private void button_dp2_append_Click(object sender, EventArgs e)
         {
             string strError = "";
-            // ½«Â·¾¶ĞŞ¸ÄÎª×·¼ÓĞÎÌ¬
-            // ½«strPath½âÎöÎªserver urlºÍlocal pathÁ½¸ö²¿·Ö
+            // å°†è·¯å¾„ä¿®æ”¹ä¸ºè¿½åŠ å½¢æ€
+            // å°†strPathè§£æä¸ºserver urlå’Œlocal pathä¸¤ä¸ªéƒ¨åˆ†
             string strServerName = "";
             string strPurePath = "";
             dp2SearchForm.ParseRecPath(this.textBox_dp2RecPath.Text,
@@ -412,12 +412,12 @@ namespace dp2Catalog
                 out strPurePath);
             if (String.IsNullOrEmpty(strServerName) == true)
             {
-                strError = "Â·¾¶²»ºÏ·¨: È±·¦·şÎñÆ÷Ãû²¿·Ö";
+                strError = "è·¯å¾„ä¸åˆæ³•: ç¼ºä¹æœåŠ¡å™¨åéƒ¨åˆ†";
                 goto ERROR1;
             }
             if (String.IsNullOrEmpty(strPurePath) == true)
             {
-                strError = "Â·¾¶²»ºÏ·¨£ºÈ±·¦´¿Â·¾¶²¿·Ö";
+                strError = "è·¯å¾„ä¸åˆæ³•ï¼šç¼ºä¹çº¯è·¯å¾„éƒ¨åˆ†";
                 goto ERROR1;
             }
 
@@ -433,8 +433,8 @@ namespace dp2Catalog
 
         private void button_dtlp_append_Click(object sender, EventArgs e)
         {
-            // localhost/ÖĞÎÄÍ¼Êé/ctlno/1
-            // 3²¿·ÖÒÔÉÏ±ä³ÉÁ½²¿·Ö
+            // localhost/ä¸­æ–‡å›¾ä¹¦/ctlno/1
+            // 3éƒ¨åˆ†ä»¥ä¸Šå˜æˆä¸¤éƒ¨åˆ†
 
             string strPath = this.textBox_dtlpRecPath.Text;
 
@@ -459,8 +459,8 @@ namespace dp2Catalog
         private void button_unionCatalog_append_Click(object sender, EventArgs e)
         {
             string strError = "";
-            // ½«Â·¾¶ĞŞ¸ÄÎª×·¼ÓĞÎÌ¬
-            // ½«strPath½âÎöÎªserver urlºÍlocal pathÁ½¸ö²¿·Ö
+            // å°†è·¯å¾„ä¿®æ”¹ä¸ºè¿½åŠ å½¢æ€
+            // å°†strPathè§£æä¸ºserver urlå’Œlocal pathä¸¤ä¸ªéƒ¨åˆ†
             string strServerName = "";
             string strPurePath = "";
             dp2SearchForm.ParseRecPath(this.textBox_unionCatalogRecPath.Text,
@@ -468,12 +468,12 @@ namespace dp2Catalog
                 out strPurePath);
             if (String.IsNullOrEmpty(strServerName) == true)
             {
-                strError = "Â·¾¶²»ºÏ·¨: È±·¦·şÎñÆ÷Ãû²¿·Ö";
+                strError = "è·¯å¾„ä¸åˆæ³•: ç¼ºä¹æœåŠ¡å™¨åéƒ¨åˆ†";
                 goto ERROR1;
             }
             if (String.IsNullOrEmpty(strPurePath) == true)
             {
-                strError = "Â·¾¶²»ºÏ·¨£ºÈ±·¦´¿Â·¾¶²¿·Ö";
+                strError = "è·¯å¾„ä¸åˆæ³•ï¼šç¼ºä¹çº¯è·¯å¾„éƒ¨åˆ†";
                 goto ERROR1;
             }
 
@@ -530,20 +530,20 @@ namespace dp2Catalog
         static string ValidateRecPath(string strRecPath)
         {
             if (strRecPath.IndexOfAny(new char[] {
-            '£¿',
-            '£±',
-            '£²',
-            '£³',
-            '£´',
-            '£µ',
-            '£¶',
-            '£·',
-            '£¸',
-            '£¹',
-            '£°',
-            '£¯',
-            '£À'}) != -1)
-                return "¼ÇÂ¼Â·¾¶ÖĞº¬ÓĞ·Ç·¨×Ö·û¡£×¢Òâ ?1234567890/@ ÕâÑùµÄ×Ö·û¶¼Ó¦¸ÃÊ¹ÓÃ°ë½Ç(Î÷ÎÄ)×Ö·û";
+            'ï¼Ÿ',
+            'ï¼‘',
+            'ï¼’',
+            'ï¼“',
+            'ï¼”',
+            'ï¼•',
+            'ï¼–',
+            'ï¼—',
+            'ï¼˜',
+            'ï¼™',
+            'ï¼',
+            'ï¼',
+            'ï¼ '}) != -1)
+                return "è®°å½•è·¯å¾„ä¸­å«æœ‰éæ³•å­—ç¬¦ã€‚æ³¨æ„ ?1234567890/@ è¿™æ ·çš„å­—ç¬¦éƒ½åº”è¯¥ä½¿ç”¨åŠè§’(è¥¿æ–‡)å­—ç¬¦";
             return null;
         }
 

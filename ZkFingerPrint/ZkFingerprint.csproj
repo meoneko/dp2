@@ -71,12 +71,19 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestTimestampUrl>http://timestamp.comodoca.com/rfc3161</ManifestTimestampUrl>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxInterop.ZKFPEngXControl, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HT.AxInterop.ZKFPEngXControl.4.0.0.0\lib\AxInterop.ZKFPEngXControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ZKFPEngXControl, Version=4.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\HT.AxInterop.ZKFPEngXControl.4.0.0.0\lib\Interop.ZKFPEngXControl.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Remoting" />
@@ -123,7 +130,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="dp2003.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

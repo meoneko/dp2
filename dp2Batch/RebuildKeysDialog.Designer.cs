@@ -1,4 +1,4 @@
-namespace dp2Batch
+ï»¿namespace dp2Batch
 {
     partial class RebuildKeysDialog
     {
@@ -46,7 +46,7 @@ namespace dp2Batch
             this.radioButton_record.Name = "radioButton_record";
             this.radioButton_record.Size = new System.Drawing.Size(94, 19);
             this.radioButton_record.TabIndex = 0;
-            this.radioButton_record.Text = "µ¥¼ÇÂ¼(&R)";
+            this.radioButton_record.Text = "å•è®°å½•(&R)";
             this.radioButton_record.UseVisualStyleBackColor = true;
             // 
             // radioButton_whole
@@ -58,7 +58,7 @@ namespace dp2Batch
             this.radioButton_whole.Size = new System.Drawing.Size(79, 19);
             this.radioButton_whole.TabIndex = 1;
             this.radioButton_whole.TabStop = true;
-            this.radioButton_whole.Text = "ÕûÌå(&W)";
+            this.radioButton_whole.Text = "æ•´ä½“(&W)";
             this.radioButton_whole.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -75,7 +75,7 @@ namespace dp2Batch
             this.groupBox1.Size = new System.Drawing.Size(344, 317);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ÖØ½¨¼ìË÷µãµÄ·½Ê½";
+            this.groupBox1.Text = "é‡å»ºæ£€ç´¢ç‚¹çš„æ–¹å¼";
             // 
             // button_Cancel
             // 
@@ -85,7 +85,7 @@ namespace dp2Batch
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(89, 28);
             this.button_Cancel.TabIndex = 13;
-            this.button_Cancel.Text = "È¡Ïû";
+            this.button_Cancel.Text = "å–æ¶ˆ";
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // button_OK
@@ -95,7 +95,7 @@ namespace dp2Batch
             this.button_OK.Name = "button_OK";
             this.button_OK.Size = new System.Drawing.Size(89, 28);
             this.button_OK.TabIndex = 12;
-            this.button_OK.Text = "È·¶¨";
+            this.button_OK.Text = "ç¡®å®š";
             this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
             // 
             // textBox_comment_record
@@ -109,7 +109,7 @@ namespace dp2Batch
             this.textBox_comment_record.ReadOnly = true;
             this.textBox_comment_record.Size = new System.Drawing.Size(275, 105);
             this.textBox_comment_record.TabIndex = 2;
-            this.textBox_comment_record.Text = "ÖØ½¨¼ìË÷µãÊ±²»Çå³ıÊı¾İ¿âµÄÈ«²¿¼ìË÷µã£¬ ¶ÔÊı¾İ¿âµÄÈÕ³£Ê¹ÓÃ»ù±¾Ã»ÓĞÓ°Ïì¡£\r\n\r\nÖØ½¨²Ù×÷¹ı³ÌËæÊ±¿ÉÒÔÖĞ¶Ï¡¢¼ÌĞø¡£";
+            this.textBox_comment_record.Text = "é‡å»ºæ£€ç´¢ç‚¹æ—¶ä¸æ¸…é™¤æ•°æ®åº“çš„å…¨éƒ¨æ£€ç´¢ç‚¹ï¼Œ å¯¹æ•°æ®åº“çš„æ—¥å¸¸ä½¿ç”¨åŸºæœ¬æ²¡æœ‰å½±å“ã€‚\r\n\r\né‡å»ºæ“ä½œè¿‡ç¨‹éšæ—¶å¯ä»¥ä¸­æ–­ã€ç»§ç»­ã€‚";
             // 
             // textBox_comment_whole
             // 
@@ -122,7 +122,7 @@ namespace dp2Batch
             this.textBox_comment_whole.ReadOnly = true;
             this.textBox_comment_whole.Size = new System.Drawing.Size(275, 97);
             this.textBox_comment_whole.TabIndex = 3;
-            this.textBox_comment_whole.Text = "ÏÈÇå³ıÁËÊı¾İ¿âµÄÈ«²¿¼ìË÷µã£¬È»ºóÖğ¼ÇÂ¼ÖØ½¨¡£\r\n\r\nÔÚÕûÅú²Ù×÷Ã»ÓĞÍê³ÉÇ°£¬Êı¾İ¿â´¦ÓÚ²»ÍêÕû×´Ì¬¡£\r\n";
+            this.textBox_comment_whole.Text = "å…ˆæ¸…é™¤äº†æ•°æ®åº“çš„å…¨éƒ¨æ£€ç´¢ç‚¹ï¼Œç„¶åé€è®°å½•é‡å»ºã€‚\r\n\r\nåœ¨æ•´æ‰¹æ“ä½œæ²¡æœ‰å®Œæˆå‰ï¼Œæ•°æ®åº“å¤„äºä¸å®Œæ•´çŠ¶æ€ã€‚\r\n";
             // 
             // RebuildKeysDialog
             // 
@@ -140,7 +140,7 @@ namespace dp2Batch
             this.MinimizeBox = false;
             this.Name = "RebuildKeysDialog";
             this.ShowInTaskbar = false;
-            this.Text = "ÖØ½¨¼ìË÷µãµÄ·½Ê½";
+            this.Text = "é‡å»ºæ£€ç´¢ç‚¹çš„æ–¹å¼";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

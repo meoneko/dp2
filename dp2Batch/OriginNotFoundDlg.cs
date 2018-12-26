@@ -103,20 +103,20 @@ namespace dp2Batch11
             // 
             // label_message
             // 
-            this.label_message.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_message.Location = new System.Drawing.Point(8, 8);
+            this.label_message.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_message.Location = new System.Drawing.Point(7, 7);
             this.label_message.Name = "label_message";
-            this.label_message.Size = new System.Drawing.Size(483, 130);
+            this.label_message.Size = new System.Drawing.Size(485, 148);
             this.label_message.TabIndex = 0;
             // 
             // radioButton_skip
             // 
             this.radioButton_skip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.radioButton_skip.Location = new System.Drawing.Point(8, 170);
+            this.radioButton_skip.Location = new System.Drawing.Point(7, 185);
             this.radioButton_skip.Name = "radioButton_skip";
-            this.radioButton_skip.Size = new System.Drawing.Size(208, 24);
+            this.radioButton_skip.Size = new System.Drawing.Size(173, 22);
             this.radioButton_skip.TabIndex = 1;
             this.radioButton_skip.Text = "忽略[不导入任何数据库] (&S)";
             this.radioButton_skip.CheckedChanged += new System.EventHandler(this.radioButton_skip_CheckedChanged);
@@ -124,9 +124,9 @@ namespace dp2Batch11
             // radioButton_append
             // 
             this.radioButton_append.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.radioButton_append.Location = new System.Drawing.Point(8, 194);
+            this.radioButton_append.Location = new System.Drawing.Point(7, 207);
             this.radioButton_append.Name = "radioButton_append";
-            this.radioButton_append.Size = new System.Drawing.Size(208, 23);
+            this.radioButton_append.Size = new System.Drawing.Size(173, 21);
             this.radioButton_append.TabIndex = 2;
             this.radioButton_append.Text = "追加到下列数据库(&A)";
             this.radioButton_append.CheckedChanged += new System.EventHandler(this.radioButton_append_CheckedChanged);
@@ -134,9 +134,9 @@ namespace dp2Batch11
             // radioButton_overwrite
             // 
             this.radioButton_overwrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.radioButton_overwrite.Location = new System.Drawing.Point(8, 250);
+            this.radioButton_overwrite.Location = new System.Drawing.Point(7, 259);
             this.radioButton_overwrite.Name = "radioButton_overwrite";
-            this.radioButton_overwrite.Size = new System.Drawing.Size(208, 23);
+            this.radioButton_overwrite.Size = new System.Drawing.Size(173, 21);
             this.radioButton_overwrite.TabIndex = 3;
             this.radioButton_overwrite.Text = "覆盖到下列数据库(&O)";
             this.radioButton_overwrite.CheckedChanged += new System.EventHandler(this.radioButton_overwrite_CheckedChanged);
@@ -144,27 +144,27 @@ namespace dp2Batch11
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.Location = new System.Drawing.Point(24, 217);
+            this.label2.Location = new System.Drawing.Point(20, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 23);
+            this.label2.Size = new System.Drawing.Size(53, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "库名(&D):";
             // 
             // textBox_appendDbName
             // 
-            this.textBox_appendDbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_appendDbName.Location = new System.Drawing.Point(88, 217);
+            this.textBox_appendDbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_appendDbName.Location = new System.Drawing.Point(73, 228);
             this.textBox_appendDbName.Name = "textBox_appendDbName";
-            this.textBox_appendDbName.Size = new System.Drawing.Size(363, 21);
+            this.textBox_appendDbName.Size = new System.Drawing.Size(386, 20);
             this.textBox_appendDbName.TabIndex = 5;
             // 
             // button_findAppendDbName
             // 
             this.button_findAppendDbName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_findAppendDbName.Location = new System.Drawing.Point(451, 217);
+            this.button_findAppendDbName.Location = new System.Drawing.Point(459, 228);
             this.button_findAppendDbName.Name = "button_findAppendDbName";
-            this.button_findAppendDbName.Size = new System.Drawing.Size(40, 22);
+            this.button_findAppendDbName.Size = new System.Drawing.Size(33, 21);
             this.button_findAppendDbName.TabIndex = 6;
             this.button_findAppendDbName.Text = "...";
             this.button_findAppendDbName.Click += new System.EventHandler(this.button_findAppendDbName_Click);
@@ -172,37 +172,37 @@ namespace dp2Batch11
             // button_findOverwriteDbName
             // 
             this.button_findOverwriteDbName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_findOverwriteDbName.Location = new System.Drawing.Point(451, 273);
+            this.button_findOverwriteDbName.Location = new System.Drawing.Point(459, 280);
             this.button_findOverwriteDbName.Name = "button_findOverwriteDbName";
-            this.button_findOverwriteDbName.Size = new System.Drawing.Size(40, 22);
+            this.button_findOverwriteDbName.Size = new System.Drawing.Size(33, 21);
             this.button_findOverwriteDbName.TabIndex = 9;
             this.button_findOverwriteDbName.Text = "...";
             this.button_findOverwriteDbName.Click += new System.EventHandler(this.button_findOverwriteDbName_Click);
             // 
             // textBox_overwriteDbName
             // 
-            this.textBox_overwriteDbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_overwriteDbName.Location = new System.Drawing.Point(88, 273);
+            this.textBox_overwriteDbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_overwriteDbName.Location = new System.Drawing.Point(73, 280);
             this.textBox_overwriteDbName.Name = "textBox_overwriteDbName";
-            this.textBox_overwriteDbName.Size = new System.Drawing.Size(363, 21);
+            this.textBox_overwriteDbName.Size = new System.Drawing.Size(386, 20);
             this.textBox_overwriteDbName.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.Location = new System.Drawing.Point(24, 273);
+            this.label3.Location = new System.Drawing.Point(20, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 23);
+            this.label3.Size = new System.Drawing.Size(53, 22);
             this.label3.TabIndex = 7;
             this.label3.Text = "库名(&D):";
             // 
             // button_OK
             // 
             this.button_OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_OK.Location = new System.Drawing.Point(336, 346);
+            this.button_OK.Location = new System.Drawing.Point(363, 348);
             this.button_OK.Name = "button_OK";
-            this.button_OK.Size = new System.Drawing.Size(75, 22);
+            this.button_OK.Size = new System.Drawing.Size(62, 21);
             this.button_OK.TabIndex = 10;
             this.button_OK.Text = "继续";
             this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
@@ -210,9 +210,9 @@ namespace dp2Batch11
             // button_Cancel
             // 
             this.button_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Cancel.Location = new System.Drawing.Point(415, 346);
+            this.button_Cancel.Location = new System.Drawing.Point(429, 348);
             this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(75, 22);
+            this.button_Cancel.Size = new System.Drawing.Size(62, 21);
             this.button_Cancel.TabIndex = 11;
             this.button_Cancel.Text = "取消";
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
@@ -221,24 +221,24 @@ namespace dp2Batch11
             // 
             this.button_editMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_editMap.Enabled = false;
-            this.button_editMap.Location = new System.Drawing.Point(371, 138);
+            this.button_editMap.Location = new System.Drawing.Point(392, 155);
             this.button_editMap.Name = "button_editMap";
-            this.button_editMap.Size = new System.Drawing.Size(120, 21);
+            this.button_editMap.Size = new System.Drawing.Size(100, 20);
             this.button_editMap.TabIndex = 12;
             this.button_editMap.Text = "观察对照表...";
             this.button_editMap.Click += new System.EventHandler(this.button_editMap_Click);
             // 
             // checkBox_notAskWhenSameOrigin
             // 
-            this.checkBox_notAskWhenSameOrigin.Location = new System.Drawing.Point(8, 296);
+            this.checkBox_notAskWhenSameOrigin.Location = new System.Drawing.Point(7, 275);
             this.checkBox_notAskWhenSameOrigin.Name = "checkBox_notAskWhenSameOrigin";
-            this.checkBox_notAskWhenSameOrigin.Size = new System.Drawing.Size(464, 24);
+            this.checkBox_notAskWhenSameOrigin.Size = new System.Drawing.Size(386, 22);
             this.checkBox_notAskWhenSameOrigin.TabIndex = 13;
             this.checkBox_notAskWhenSameOrigin.Text = "以后如遇相同情况不再询问(&N)";
             // 
             // OriginNotFoundDlg
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(499, 377);
             this.Controls.Add(this.checkBox_notAskWhenSameOrigin);
             this.Controls.Add(this.button_editMap);

@@ -1,219 +1,219 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Diagnostics;
 
-namespace dp2Batch1 // ±¾ÀàÒÑ¾­±»·ÏÖ¹
+namespace dp2Batch1 // æœ¬ç±»å·²ç»è¢«åºŸæ­¢
 {
-	/// <summary>
-	/// backupÎÄ¼şÖĞµÄÊı¾İ¿âÃû ºÍ ±¾´ÎÄâ×ªÈëµÄÄ¿±ê¿âÃûÖ®¼äµÄ¶ÔÕÕ±í
-	/// </summary>
-	public class DbNameMap
-	{
-		Hashtable m_hashtable = new Hashtable();
-		ArrayList m_list = new ArrayList();
+    /// <summary>
+    /// backupæ–‡ä»¶ä¸­çš„æ•°æ®åº“å å’Œ æœ¬æ¬¡æ‹Ÿè½¬å…¥çš„ç›®æ ‡åº“åä¹‹é—´çš„å¯¹ç…§è¡¨
+    /// </summary>
+    public class DbNameMap
+    {
+        Hashtable m_hashtable = new Hashtable();
+        ArrayList m_list = new ArrayList();
 
-		public DbNameMap()
-		{
-			//
-			// TODO: Add constructor logic here
-			//
-		}
+        public DbNameMap()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+        }
 
-		// ¹¹Ôìmap¶ÔÏó¡£
-		// parameters:
-		//		strDbPaths	·ÖºÅ¼ä¸ôµÄÂ·¾¶¡£½«´´½¨ÎªOriginºÍTargetÏàÍ¬µÄoverwriteÊÂÏî¡£
-		//					¸ñÊ½Îª dbpathorigin-dbpathtarget|style;...
-		//					¿ÉÒÔÊ¡ÂÔÎªdbpath1;dbpath2;... Ã¿¸öpath¼Èµ±originÒ²µ±targetÓÃ
-		public static DbNameMap Build(string strDbPaths,
+        // æ„é€ mapå¯¹è±¡ã€‚
+        // parameters:
+        //		strDbPaths	åˆ†å·é—´éš”çš„è·¯å¾„ã€‚å°†åˆ›å»ºä¸ºOriginå’ŒTargetç›¸åŒçš„overwriteäº‹é¡¹ã€‚
+        //					æ ¼å¼ä¸º dbpathorigin-dbpathtarget|style;...
+        //					å¯ä»¥çœç•¥ä¸ºdbpath1;dbpath2;... æ¯ä¸ªpathæ—¢å½“originä¹Ÿå½“targetç”¨
+        public static DbNameMap Build(string strDbPaths,
             out string strError)
-		{
+        {
             strError = "";
-			DbNameMap map = new DbNameMap();
+            DbNameMap map = new DbNameMap();
 
-			string[] aPath = strDbPaths.Split(new char[]{';'});
+            string[] aPath = strDbPaths.Split(new char[] { ';' });
 
-			for(int i=0;i<aPath.Length;i++)
-			{
-				string strLine = aPath[i].Trim();
-				if (strLine == "")
-					continue;
-				string strOrigin = "";
-				string strTarget = "";
-				string strStyle = "";
+            for (int i = 0; i < aPath.Length; i++)
+            {
+                string strLine = aPath[i].Trim();
+                if (strLine == "")
+                    continue;
+                string strOrigin = "";
+                string strTarget = "";
+                string strStyle = "";
 
-				int nRet = strLine.IndexOf("|");
-				if (nRet == -1)
-					strStyle = "overwrite";
-				else 
-				{
-					strStyle = strLine.Substring(nRet + 1).Trim().ToLower();
-					strLine = strLine.Substring(0, nRet).Trim();
-				}
+                int nRet = strLine.IndexOf("|");
+                if (nRet == -1)
+                    strStyle = "overwrite";
+                else
+                {
+                    strStyle = strLine.Substring(nRet + 1).Trim().ToLower();
+                    strLine = strLine.Substring(0, nRet).Trim();
+                }
 
-				nRet = strLine.IndexOf("-");
-				if (nRet == -1)
-				{
-					strOrigin = strLine;
-					strTarget = strLine;
-				}
-				else 
-				{
-					strOrigin = strLine.Substring(0, nRet).Trim();
-					strTarget = strLine.Substring(nRet + 1).Trim();
-				}
+                nRet = strLine.IndexOf("-");
+                if (nRet == -1)
+                {
+                    strOrigin = strLine;
+                    strTarget = strLine;
+                }
+                else
+                {
+                    strOrigin = strLine.Substring(0, nRet).Trim();
+                    strTarget = strLine.Substring(nRet + 1).Trim();
+                }
 
-				if (map.NewItem(strOrigin, strTarget, strStyle, out strError) == null)
+                if (map.NewItem(strOrigin, strTarget, strStyle, out strError) == null)
                     return null;
-			}
+            }
 
-			return map;
-		}
+            return map;
+        }
 
-		// ½«È«²¿ÄÚÈİ×ª»»Îª×Ö·û´®ĞÍÌ¬
-		// parameters:
-		//		bCompact	ÊÇ·ñÎª½ô´ÕĞÍÌ¬
-		public string ToString(bool bCompact)
-		{
-			string strResult = "";
-			for(int i=0;i<this.m_list.Count;i++)
-			{
-				DbNameMapItem item = (DbNameMapItem)this.m_list[i];
+        // å°†å…¨éƒ¨å†…å®¹è½¬æ¢ä¸ºå­—ç¬¦ä¸²å‹æ€
+        // parameters:
+        //		bCompact	æ˜¯å¦ä¸ºç´§å‡‘å‹æ€
+        public string ToString(bool bCompact)
+        {
+            string strResult = "";
+            for (int i = 0; i < this.m_list.Count; i++)
+            {
+                DbNameMapItem item = (DbNameMapItem)this.m_list[i];
 
-				if (strResult != "")
-					strResult += ";";
+                if (strResult != "")
+                    strResult += ";";
 
-				if (bCompact == true)
-				{
-					if (item.Origin == item.Target)
-					{
-						if (item.Style == "overwrite")
-							strResult += item.Origin;
-						else
-							strResult += item.Origin + "|" + item.Style;
-					}
-					else 
-					{
-						if (item.Style == "overwrite")
-							strResult += item.Origin + "-" + item.Target;
-						else
-							strResult += item.Origin + "-" + item.Target + "|" + item.Style;
+                if (bCompact == true)
+                {
+                    if (item.Origin == item.Target)
+                    {
+                        if (item.Style == "overwrite")
+                            strResult += item.Origin;
+                        else
+                            strResult += item.Origin + "|" + item.Style;
+                    }
+                    else
+                    {
+                        if (item.Style == "overwrite")
+                            strResult += item.Origin + "-" + item.Target;
+                        else
+                            strResult += item.Origin + "-" + item.Target + "|" + item.Style;
 
-					}
+                    }
 
-				}
-				else
-					strResult += item.Origin + "-" + item.Target + "|" + item.Style;
-			}
+                }
+                else
+                    strResult += item.Origin + "-" + item.Target + "|" + item.Style;
+            }
 
-			return strResult;
-		}
+            return strResult;
+        }
 
-		public DbNameMapItem NewItem(string strOrigin,
-			string strTarget,
-			string strStyle,
+        public DbNameMapItem NewItem(string strOrigin,
+            string strTarget,
+            string strStyle,
             out string strError)
-		{
-			return NewItem(strOrigin,
-				strTarget,
-				strStyle,
+        {
+            return NewItem(strOrigin,
+                strTarget,
+                strStyle,
                 -1,
                 out strError);
-		}
+        }
 
-		// ¼ÓÈëĞÂÏî
-		// ĞèÒª²éÖØ
-		public DbNameMapItem NewItem(string strOrigin,
-			string strTarget,
-			string strStyle,
-			int nInsertPos,
+        // åŠ å…¥æ–°é¡¹
+        // éœ€è¦æŸ¥é‡
+        public DbNameMapItem NewItem(string strOrigin,
+            string strTarget,
+            string strStyle,
+            int nInsertPos,
             out string strError)
-		{
+        {
             strError = "";
 
             Debug.Assert(strStyle.IndexOf("--") == -1, "");
 
-			DbNameMapItem item  = new DbNameMapItem();
-			item.Origin = strOrigin;
-			item.Target = strTarget;
-			item.Style = strStyle;
+            DbNameMapItem item = new DbNameMapItem();
+            item.Origin = strOrigin;
+            item.Target = strTarget;
+            item.Style = strStyle;
 
-			if (nInsertPos == -1)
-				this.m_list.Add(item);
-			else 
-				this.m_list.Insert(nInsertPos, item);
+            if (nInsertPos == -1)
+                this.m_list.Add(item);
+            else
+                this.m_list.Insert(nInsertPos, item);
 
             // 2010/2/25
             if (this.m_hashtable.ContainsKey(strOrigin.ToUpper()) == true)
             {
-                strError = "ÒÑÓĞÃûÎª '" + strOrigin + "' µÄÊÂÏî£¬²»ÄÜÖØ¸´¼ÓÈë";
+                strError = "å·²æœ‰åä¸º '" + strOrigin + "' çš„äº‹é¡¹ï¼Œä¸èƒ½é‡å¤åŠ å…¥";
                 return null;
             }
 
-			this.m_hashtable.Add(strOrigin.ToUpper(), item);
+            this.m_hashtable.Add(strOrigin.ToUpper(), item);
 
-			return item;
-		}
+            return item;
+        }
 
-		public void Clear()
-		{
-			this.m_list.Clear();
-			this.m_hashtable.Clear();
-		}
+        public void Clear()
+        {
+            this.m_list.Clear();
+            this.m_hashtable.Clear();
+        }
 
-		public int Count
-		{
-			get 
-			{
-				return m_list.Count;
-			}
-		}
+        public int Count
+        {
+            get
+            {
+                return m_list.Count;
+            }
+        }
 
-		public DbNameMapItem this[int nIndex]
-		{
-			get 
-			{
-				return (DbNameMapItem)this.m_list[nIndex];
-			}
-			set 
-			{
-				DbNameMapItem olditem = (DbNameMapItem)this.m_list[nIndex];
-				this.m_hashtable.Remove(olditem.Origin.ToUpper());
+        public DbNameMapItem this[int nIndex]
+        {
+            get
+            {
+                return (DbNameMapItem)this.m_list[nIndex];
+            }
+            set
+            {
+                DbNameMapItem olditem = (DbNameMapItem)this.m_list[nIndex];
+                this.m_hashtable.Remove(olditem.Origin.ToUpper());
 
-				this.m_list[nIndex] = value;
-				this.m_hashtable.Add(value.Origin.ToUpper(), value);
-			}
-		}
+                this.m_list[nIndex] = value;
+                this.m_hashtable.Add(value.Origin.ToUpper(), value);
+            }
+        }
 
-		// ÒÔOrigin×Ö·û´®×÷ÎªkeyËÑË÷
-		public DbNameMapItem this[string strOrigin]
-		{
-			get 
-			{
-				return (DbNameMapItem)this.m_hashtable[strOrigin.ToUpper()];
-			}
-			set 
-			{
-				DbNameMapItem olditem = (DbNameMapItem)this.m_hashtable[strOrigin.ToUpper()];
-				int nOldIndex = -1;
-				if (olditem != null)
-				{
-					nOldIndex = this.m_list.IndexOf(olditem);
-					this.m_hashtable.Remove(olditem.Origin.ToUpper());
-					this.m_list.Remove(olditem);
-				}
+        // ä»¥Originå­—ç¬¦ä¸²ä½œä¸ºkeyæœç´¢
+        public DbNameMapItem this[string strOrigin]
+        {
+            get
+            {
+                return (DbNameMapItem)this.m_hashtable[strOrigin.ToUpper()];
+            }
+            set
+            {
+                DbNameMapItem olditem = (DbNameMapItem)this.m_hashtable[strOrigin.ToUpper()];
+                int nOldIndex = -1;
+                if (olditem != null)
+                {
+                    nOldIndex = this.m_list.IndexOf(olditem);
+                    this.m_hashtable.Remove(olditem.Origin.ToUpper());
+                    this.m_list.Remove(olditem);
+                }
 
-				if (nOldIndex != -1)
-					this.m_list[nOldIndex] = value;
-				else
-					this.m_list.Add(value);
+                if (nOldIndex != -1)
+                    this.m_list[nOldIndex] = value;
+                else
+                    this.m_list.Add(value);
 
-				this.m_hashtable.Add(value.Origin.ToUpper(), value);
-			}
-		}
+                this.m_hashtable.Add(value.Origin.ToUpper(), value);
+            }
+        }
 
-		public DbNameMap Clone()
-		{
-			/*
+        public DbNameMap Clone()
+        {
+            /*
 			DbNameMap result = new DbNameMap();
 
 			foreach( DictionaryEntry entry in this)
@@ -232,60 +232,60 @@ namespace dp2Batch1 // ±¾ÀàÒÑ¾­±»·ÏÖ¹
 				result.Add(entry.Key, newitem);
 			}
 			*/
-			DbNameMap result = new DbNameMap();
+            DbNameMap result = new DbNameMap();
 
-			for(int i=0;i<this.m_list.Count;i++)
-			{
-				DbNameMapItem olditem = (DbNameMapItem)this.m_list[i];
+            for (int i = 0; i < this.m_list.Count; i++)
+            {
+                DbNameMapItem olditem = (DbNameMapItem)this.m_list[i];
 
                 string strError = "";
-				if (result.NewItem(olditem.Origin, olditem.Target, olditem.Style, out strError) == null)
+                if (result.NewItem(olditem.Origin, olditem.Target, olditem.Style, out strError) == null)
                     throw new Exception(strError);
-			}
-			return result;
-		}
+            }
+            return result;
+        }
 
-		// ¸ù¾İÔ´Â·¾¶Æ¥ÅäÊÊºÏµÄÊÂÏî
-		public DbNameMapItem MatchItem(string strOrigin)
-		{
-			for(int i=0;i<this.Count;i++)
-			{
-				DbNameMapItem item = this[i];
+        // æ ¹æ®æºè·¯å¾„åŒ¹é…é€‚åˆçš„äº‹é¡¹
+        public DbNameMapItem MatchItem(string strOrigin)
+        {
+            for (int i = 0; i < this.Count; i++)
+            {
+                DbNameMapItem item = this[i];
 
-				if (strOrigin == "{null}" || strOrigin == "" || strOrigin == null)
-				{
-					if (item.Origin == "{null}")
-						return item;
-					if (item.Origin == "*")
-					{
-						// ±¾À´Õâ¾ÍËãÆ¥ÅäÉÏÁË,µ«ÊÇ»¹ĞèÒª×ĞÏ¸¿´¿´strTargetÊÇ·ñÎª"*"
-						if (item.Target != "*")
-							return item;
-					}
-					continue;
-				}
+                if (strOrigin == "{null}" || strOrigin == "" || strOrigin == null)
+                {
+                    if (item.Origin == "{null}")
+                        return item;
+                    if (item.Origin == "*")
+                    {
+                        // æœ¬æ¥è¿™å°±ç®—åŒ¹é…ä¸Šäº†,ä½†æ˜¯è¿˜éœ€è¦ä»”ç»†çœ‹çœ‹strTargetæ˜¯å¦ä¸º"*"
+                        if (item.Target != "*")
+                            return item;
+                    }
+                    continue;
+                }
 
-				if (item.Origin == "*")
-					return item;
+                if (item.Origin == "*")
+                    return item;
 
-				if (String.Compare(item.Origin, strOrigin, true) == 0)
-					return item;
-				
-			}
+                if (String.Compare(item.Origin, strOrigin, true) == 0)
+                    return item;
 
-
-			return null;
-		}
+            }
 
 
-	}
+            return null;
+        }
 
-	public class DbNameMapItem
-	{
-		public string Origin = "";	// Ô´Í·
-		public string Target = "";	// Ä¿µÄ
 
-		public string Style;	// ·ç¸ñ¡£±È·½Ëµ"overwrite"»òÕß"append"
+    }
 
-	}
+    public class DbNameMapItem
+    {
+        public string Origin = "";  // æºå¤´
+        public string Target = "";  // ç›®çš„
+
+        public string Style;    // é£æ ¼ã€‚æ¯”æ–¹è¯´"overwrite"æˆ–è€…"append"
+
+    }
 }

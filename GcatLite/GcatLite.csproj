@@ -13,7 +13,7 @@
     <ManifestCertificateThumbprint>458DBD8488B5B2A4FD0653A590D3F6E2BC38DA9F</ManifestCertificateThumbprint>
     <ManifestKeyFile>dp2003.pfx</ManifestKeyFile>
     <GenerateManifests>false</GenerateManifests>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileUpgradeFlags>
@@ -127,7 +127,6 @@
       <DependentUpon>QuestionDlg.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="dp2003.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
